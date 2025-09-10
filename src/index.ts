@@ -7,7 +7,7 @@ import todoRoutes from "./routes/todo";
 const PORT = process.env.PORT;
 const app = express();
 
-app.use(cors());
+app.use(cors()); // recommended to use corsOptions here when deploying to production
 app.use(express.json());
 
 app.get("/", (_req: Request, res: Response) => {
